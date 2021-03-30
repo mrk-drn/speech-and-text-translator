@@ -72,12 +72,12 @@ def Translate(audio_flag, audio=NONE):
             input_text = r.recognize_google(audio, language=in_language)
             enter_text_field.insert('1.0', input_text)
         except sr.UnknownValueError:
-            messagebox.showerror("Error", "Google Speech Recognition could not \
-                understand what you said. Try again.")
+            messagebox.showerror("Error", \
+                "Google Speech Recognition could not understand what you said. Try again.")
             return
         except sr.RequestError:
-            messagebox.showerror("Error", "Could not request results from Google \
-                Speech Recognition service. Check internet connection.")
+            messagebox.showerror("Error", \
+                "Could not request results from Google Speech Recognition service. Check internet connection.")
             return
     else:
         raise Exception("Invalid audio_flag value.")
